@@ -1,6 +1,6 @@
-import Navigation from "./navigation/navigation";
-import Sidebar from "./sidebar/sidebar";
-import Channel from "./channel/channel";
+import Navigation from "./navigation/_navigation";
+import Sidebar from "./sidebar/_sidebar";
+import Channel from "./channel/_channel";
 
 export default function Workspace() {
   return (

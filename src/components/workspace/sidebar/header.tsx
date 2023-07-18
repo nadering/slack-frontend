@@ -5,7 +5,7 @@ const Header = React.memo(() => {
     <div className="vbox gap(4)">
       <div className="hbox gap(8)">
         <button className="hbox relative w(~100%-46px) r(8) p(4/8) gap(12) hover:bg(--sidebar-background-hover)">
-          <span className="w(0~90%) c(--sidebar-workspace) font(18) bold nowrap...">
+          <span className="w(0~90%) c(--sidebar-workspace) font-family(Larsseit) font(18) bold translateY(1px) nowrap...">
             {/* Workspace name */}
             {"테스트 워크스페이스"}
           </span>
