@@ -1,23 +1,13 @@
-import { Amplify, I18n } from "aws-amplify";
-import type { WithAuthenticatorProps } from "@aws-amplify/ui-react";
-import { withAuthenticator, translations } from "@aws-amplify/ui-react";
-import "@aws-amplify/ui-react/styles.css";
-import AwsConfig from "./auth/aws-config";
-import AwsKrVoca from "./translations/aws-ko";
+import { useAuthenticator } from "@aws-amplify/ui-react";
+import AuthView from "./auth/_auth-view";
+import Workspace from "./components/workspace/_workspace";
 
-Amplify.configure(AwsConfig);
-I18n.putVocabularies(translations);
-I18n.setLanguage("ko");
-I18n.putVocabulariesForLanguage("ko", AwsKrVoca);
+export default function App() {
+  const { route } = useAuthenticator(context => [context.route]);
 
-export function App({ signOut, user }: WithAuthenticatorProps) {
   return (
-    <div>
-      <p>Welcome {user?.username}</p>
-      <button onClick={signOut}>Sign out</button>
+    <div className="app" data-theme="light">
+      { route === 'authenticated' ? <Workspace /> : <AuthView />}
     </div>
   );
 }
-
-// eslint-disable-next-line react-refresh/only-export-components
-export default withAuthenticator(App);

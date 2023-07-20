@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import { adorableCSS } from "adorable-css/vite"
+import { adorableCSS } from "adorable-css/vite";
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
