@@ -1,13 +1,13 @@
 import { useAuthenticator } from "@aws-amplify/ui-react";
-import AuthView from "./auth/_auth-view";
-import Workspace from "./components/workspace/_workspace";
+import { AuthView } from "./auth";
+import { Workspace } from "./components/workspace";
 
 export default function App() {
-  const { route } = useAuthenticator(context => [context.route]);
+  const { route } = useAuthenticator((context) => [context.route]);
 
   return (
     <div className="app" data-theme="light">
-      { route === 'authenticated' ? <Workspace /> : <AuthView />}
+      {route === "authenticated" ? <Workspace /> : <AuthView />}
     </div>
   );
 }

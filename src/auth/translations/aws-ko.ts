@@ -1,4 +1,5 @@
 export default {
+  // Input Fields
   "Enter your Username": "아이디 입력",
   "Enter your Password": "비밀번호 입력",
   "Please confirm your Password": "비밀번호 입력",
@@ -16,5 +17,4 @@ export default {
   "Password did not conform with policy: Password must have numeric characters": "비밀번호에는 숫자가 1자 이상 포함되어야 합니다.",
   "Password did not conform with policy: Password must have symbol characters": "비밀번호에는 특수 문자가 1자 이상 포함되어야 합니다.",
   "Attempt limit exceeded, please try after some time.": "허용 횟수를 초과했습니다. 잠시 후 다시 시도해주세요.",
-  
 }
